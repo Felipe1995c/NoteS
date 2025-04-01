@@ -13,8 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Add note event
 addNoteBtn.addEventListener('click', () => {
-    const note = noteInput.value.trim();
+    let note = noteInput.value.trim();
     if (note) {
+      //This will capitalize the first letter of each note
+      note = note.charAt(0).toUpperCase() + note.slice(1);
         addNoteToList(note);
         saveNoteToStorage(note);
         noteInput.value = ""; // Clear the input
