@@ -69,20 +69,19 @@ themeToggle.addEventListener('click', () => toggleTheme());
 // Toggle between light and dark mode
 function toggleTheme() {
   const elementsToToggle = document.querySelectorAll('body, .container, header h1, textarea, li, button');
-  elementsToToggle.forEach(el => el.classList.toggle('dark-mode') && el.classList.toggle('light-mode'));
+  elementsToToggle.forEach(el => {
+      el.classList.toggle('dark-mode');
+      el.classList.toggle('light-mode');
+  });
 
   // Update button text and icon dynamically
-  const icon = themeToggle.querySelector('.theme-toggle');
   if (document.body.classList.contains('dark-mode')) {
-      themeToggle.textContent = ' Switch to Light Mode';
-      icon.textContent = '🌙'; // Moon icon for dark mode
-      themeToggle.prepend(icon);
+      themeToggle.textContent = '🌞 Switch to Light Mode'; // Sun icon for light mode
   } else {
-      themeToggle.textContent = ' Switch to Dark Mode';
-      icon.textContent = '🌞'; // Sun icon for light mode
-      themeToggle.prepend(icon);
+      themeToggle.textContent = '🌙 Switch to Dark Mode'; // Moon icon for dark mode
   }
 }
-// work on keeping icons when the toggle is pressed 
+
+ 
 // create rules to have the first letter of each note automatically capitalize for looks
-// upload to github
+
