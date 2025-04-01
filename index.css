@@ -26,6 +26,7 @@ header h1 {
   text-align: center;
   color: var(--font-color);
   font-weight: bold;
+  font-size: 50px;
 }
 
 textarea {
@@ -140,4 +141,47 @@ textarea.dark-mode, li.dark-mode {
   background: #444444;
   color: #f0f0f0;
   border: 1px solid var(--primary-color);
+}
+
+
+/* Responsive design rules */
+@media only screen and (max-width: 768px) {
+  .container {
+      padding: 10px;
+  }
+
+  textarea {
+      font-size: 14px;
+  }
+
+  ul#notes-list li {
+      font-size: 14px;
+      flex-direction: column; /* Stack elements vertically on smaller screens */
+      align-items: flex-start;
+  }
+
+  .delete-btn {
+      margin-top: 5px; /* Add spacing for stacked layout */
+  }
+
+  header h1 {
+      font-size: 20px; /* Adjust the header size for smaller screens */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  textarea {
+      font-size: 12px;
+  }
+
+  ul#notes-list li {
+      padding: 8px;
+  }
+  .delete-btn {
+    padding-right: 50px;
+  }
+
+  header h1 {
+      font-size: 30px; /* Further adjustment for very small screens */
+  }
 }
