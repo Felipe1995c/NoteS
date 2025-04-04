@@ -31,7 +31,7 @@ function addNoteToList(note) {
         <button class="delete-btn">Delete</button>
     `;
 
-    // This is the action that is triggered when the delete button is clicked
+    // This is the action(delete) that is triggered when the delete button is clicked
     listItem.querySelector('.delete-btn').addEventListener('click', () => {
         listItem.remove();
         deleteNoteFromStorage(note);
@@ -85,5 +85,4 @@ function toggleTheme() {
 }
 
  
-// create rules to have the first letter of each note automatically capitalize for looks
 

@@ -1,9 +1,11 @@
+/* Colors that were most used throughout the app */
 :root {
   --primary-color: #1e3f66;
   --secondary-color: #91bad6;
   --font-color: #bcd2e8;
   --font-color2: #1e3f66;
 }
+/* This will be the general rules for most of the app */
 
 body {
   font-family: 'Arial', sans-serif;
